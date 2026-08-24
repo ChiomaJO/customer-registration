@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef5ff 0%, #f7f9fc 100%);
+    color: #1f2937;
+}
+
+.container {
+    width: min(92%, 720px);
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 36px 32px;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(31, 41, 55, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 12px;
+    color: #0f172a;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.description {
+    text-align: center;
+    margin: 0 0 28px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+}
+
+.top-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1565c0;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: #eef6ff;
+    transition: all 0.2s ease;
+}
+
+.top-nav a:hover {
+    background: #dfeeff;
+    transform: translateY(-1px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+button {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}

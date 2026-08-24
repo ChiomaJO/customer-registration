@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Registered Customers</h1>
+
+    {% if customers %}
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for customer in customers %}
+
+            <tr>
+                <td>{{ customer.id }}</td>
+                <td>{{ customer.full_name }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.phone }}</td>
+                <td>{{ customer.date_of_birth }}</td>
+                <td>{{ customer.gender }}</td>
+                <td>{{ customer.address }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    {% else %}
+
+    <p class="empty">No customers registered yet.</p>
+
+    {% endif %}
+
+    <div class="customer-links">
+
+        <a href="{{ url_for('index') }}">
+            Back to Registration Form
+        </a>
+
+        <a href="{{ url_for('customers') }}">
+            Refresh Customer List
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

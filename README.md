@@ -6,6 +6,10 @@ A cloud-based customer registration application built with HTML, CSS, JavaScript
 
 This project provides a simple customer registration form that collects basic customer information and sends the registration request to an AWS backend for validation.
 
+## Application Preview
+
+![About JO](me.png)
+
 ## Features
 
 - Customer registration form
